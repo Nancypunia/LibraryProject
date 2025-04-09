@@ -1,0 +1,11 @@
+<%- include('header') %>
+
+<div class="container">
+  <h2>Borrow Book</h2>
+  <p>You have selected: <strong><%= book.title %></strong></p>
+  <p>Return Date: <strong><%= returnDate %></strong></p>
+  <form action="/return" method="POST">
+    <input type="hidden" name="bookId" value="<%= book.id %>">
+    <button type="submit">Return Book</button>
+  </form>
+</div>

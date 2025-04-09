@@ -1,0 +1,34 @@
+<%- include('header') %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' /> 
+
+  </head>
+  <body>
+<%- include('header') %>
+
+    <% include header %> 
+    <h1><%= title %></h1>
+
+    <p>Welcome to <%= title %></p>
+    <% products.forEach(function(data){ %> 
+    <div class="row">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3><%= data.title %> </h3>
+            <p class="description"><%= data.description %> </p>
+            <div class="clearfix">
+            <div class="price pull-left"><i class="fa fa-tag" aria-hidden="true"></i> <%= data.price %> CHF</div>
+              <a href="/add/<%= data.id %> " class="btn btn-default pull-right" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% }) %> 
+</body>
+</html>
