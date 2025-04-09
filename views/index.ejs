@@ -1,0 +1,56 @@
+<%- include('header') %>
+
+<section class="home-section">
+  <h1>Welcome to the Open Library</h1>
+  <p>Find, Borrow, and Read your favorite books!</p>
+</section>
+
+<section class="books-section">
+  <div id="search-container">
+    <input type="search" id="search-input" placeholder="Search Title name here.." />
+    <button id="search">Search</button>
+  </div>
+
+  <div id="buttons">
+    <button class="button-value" onclick="filterProduct('all')">All</button>
+    <button class="button-value" onclick="filterProduct('IT')">IT</button>
+    <button class="button-value" onclick="filterProduct('CSE')">CSE</button>
+    <button class="button-value" onclick="filterProduct('Novel')">Novel</button>
+    <button class="button-value" onclick="filterProduct('Fantasy')">Fantasy</button>
+    <button class="button-value" onclick="filterProduct('Love')">Love</button>
+  </div>
+
+  <div id="Books">
+    <% books.forEach(book => { %>
+      <div class="book" data-category="<%= book.category %>">
+        <h3><%= book.title %></h3>
+        <p>Category: <%= book.category %></p>
+        <a href="/borrow/<%= book.id %>">
+          <button>Borrow</button>
+        </a>
+      </div>
+    <% }) %>
+  </div>
+</section>
+
+<script>
+  const filterProduct = (value) => {
+    let books = document.querySelectorAll(".book");
+    books.forEach((book) => {
+      if (value === "all" || book.dataset.category === value) {
+        book.style.display = "block";
+      } else {
+        book.style.display = "none";
+      }
+    });
+  };
+
+  document.getElementById("search").addEventListener("click", () => {
+    const searchInput = document.getElementById("search-input").value.toLowerCase();
+    let books = document.querySelectorAll(".book");
+    books.forEach((book) => {
+      const title = book.querySelector("h3").textContent.toLowerCase();
+      book.style.display = title.includes(searchInput) ? "block" : "none";
+    });
+  });
+</script>

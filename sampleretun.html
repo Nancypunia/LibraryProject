@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Return Book</title>
+  <link rel="stylesheet" href="samplestyles.css" />
+</head>
+<body>
+  <div class="return-container">
+    <h2>Return a Book</h2>
+    <form id="return-form">
+      <input type="text" placeholder="Enter Book Title" required />
+      <button type="submit">Return</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("return-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Book returned successfully!");
+      window.location.href = "samplehistory.html";
+    });
+  </script>
+</body>
+</html>

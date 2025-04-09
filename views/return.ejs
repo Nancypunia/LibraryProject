@@ -1,0 +1,10 @@
+<%- include('header') %>
+
+<div class="form-container">
+  <h2>Return Book</h2>
+  <form action="/return" method="POST">
+    <label for="bookId">Enter Book ID to Return:</label>
+    <input type="text" id="bookId" name="bookId" placeholder="Book ID" required />
+    <button type="submit">Return</button>
+  </form>
+</div>

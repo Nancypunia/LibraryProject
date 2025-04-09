@@ -1,0 +1,9 @@
+
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+.header { background: #333; color: #fff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+.logo a { color: white; text-decoration: none; font-size: 24px; }
+.nav-links { list-style: none; display: flex; gap: 15px; }
+.nav-links a { color: white; text-decoration: none; }
+.container, .form-container { max-width: 600px; margin: 30px auto; background: white; padding: 20px; border-radius: 8px; }
+input, button, select, textarea { display: block; width: 100%; margin: 10px 0; padding: 10px; }
+button { background: #333; color: white; border: none; cursor: pointer; }

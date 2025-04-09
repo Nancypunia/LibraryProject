@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Borrowing History</title>
+  <link rel="stylesheet" href="samplestyles.css" />
+</head>
+<body>
+  <div class="history-container">
+    <h2>Your Borrow History</h2>
+    <ul id="history-list">
+      <!-- Example entries -->
+      <li>Harry Potter - Return by April 15 <button onclick="returnBook(this)">Return</button></li>
+      <li>DBMS Concepts - Return by April 17 <button onclick="returnBook(this)">Return</button></li>
+    </ul>
+  </div>
+
+  <script>
+    function returnBook(btn) {
+      btn.parentElement.remove();
+      alert("Book Returned Successfully!");
+    }
+  </script>
+</body>
+</html>

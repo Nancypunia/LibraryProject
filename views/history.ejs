@@ -1,0 +1,24 @@
+<%- include('header') %>
+
+<div class="container">
+  <h2>Your Borrow History</h2>
+
+  <% if (history.length === 0) { %>
+    <p>No books borrowed yet.</p>
+  <% } else { %>
+    <ul>
+      <% history.forEach(entry => { %>
+        <li>
+          <strong><%= entry.title %></strong> |
+          Borrowed on: <%= entry.borrowDate %> |
+          Return by: <%= entry.returnDate %> |
+          <% if (entry.returned) { %>
+            <span style="color: green;">Returned</span>
+          <% } else { %>
+            <span style="color: red;">Not Returned</span>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</div>

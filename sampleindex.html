@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Management</title>
+  <link rel="stylesheet" href="samplestyles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Library Management</div>
+    <ul class="nav-links">
+      <li><a href="#home-section">Home</a></li>
+      <li><a href="#books-section">Books</a></li>
+      <li><a href="#contact-section">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home-section" class="home-section">
+    <h1>Welcome to the Open Library</h1>
+    <p>Find, Borrow, and Read your favorite books!</p>
+  </section>
+
+  <!-- Book Section -->
+  <section id="books-section" class="books-section">
+    <div id="search-container">
+      <input type="search" id="search-input" placeholder="Search Title name here.." />
+      <button id="search">Search</button>
+    </div>
+    <div id="buttons">
+      <button class="button-value" onclick="filterProduct('all')">All</button>
+      <button class="button-value" onclick="filterProduct('Basic')">Basic</button>
+      <button class="button-value" onclick="filterProduct('IT')">IT</button>
+      <button class="button-value" onclick="filterProduct('CSE')">CSE</button>
+      <button class="button-value" onclick="filterProduct('ISE')">ISE</button>
+      <button class="button-value" onclick="filterProduct('Novel')">Novel</button>
+      <button class="button-value" onclick="filterProduct('Fantasy')">Fantasy</button>
+    </div>
+    <div id="Books"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact-section" class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <a href="#"><i class="fa fa-github"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="row">
+        <ul>
+          <li><a href="#contact-section">Contact us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        Library Management || Copyright © 2022 - All rights reserved || Designed By: P JAGADEESH
+      </div>
+    </div>
+  </footer>
+
+  <script src="/scripts/samplescript.js"></script>
+</body>
+</html>

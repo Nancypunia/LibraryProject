@@ -1,0 +1,12 @@
+<%- include('header') %>
+
+<div class="form-container">
+  <h2>Signup</h2>
+  <form action="/signup" method="POST">
+    <input type="text" name="username" placeholder="Choose a username" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="password" name="password" placeholder="Choose a password" required />
+    <button type="submit">Create Account</button>
+    <p>Already have an account? <a href="/login">Login here</a></p>
+  </form>
+</div>

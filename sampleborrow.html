@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Borrow Confirmation</title>
+  <link rel="stylesheet" href="samplesignup.html" />
+</head>
+<body>
+  <div class="borrow-container">
+    <h2>Book Borrowed Successfully!</h2>
+    <p>Return Date: <strong id="return-date"></strong></p>
+    <a href="samplehistory.html">Go to History</a>
+  </div>
+
+  <script>
+    const returnDate = new Date();
+    returnDate.setDate(returnDate.getDate() + 7);
+    document.getElementById("return-date").textContent = returnDate.toDateString();
+  </script>
+</body>
+</html>
+
